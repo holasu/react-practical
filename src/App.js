@@ -1,18 +1,13 @@
-
-import './App.css'
-import ProductData from "./ProductData"
-import Product from "./Product"
-
+import React from 'react'
+import TodoItem from "./TodoItem"
+import todoData from "./todoData"
 
 function App(){
-  
-      const productCommponents = ProductData.map( item => < Product  key={item.id} products={item}/>)
-
-      return(
-        <div className="App">
-              {productCommponents}
+    const todoItems = todoData.map( item => <TodoItem key={item.id} item={item}/>)
+    return(
+        <div className="todo-item">
+            {todoItems}
         </div>
-      );
+    );
 }
-
 export default App;
